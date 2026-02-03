@@ -10,26 +10,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.santidev.practicajc.debugging.MostrarUsoDeLogs
-import com.santidev.practicajc.lambdas.MostrarLambdas
-import com.santidev.practicasjetpackcompose.buclesYcondicionales.MostrarUsoDeCondicionales
-import com.santidev.practicasjetpackcompose.operadores.MostrarTiposDeOperadores
-import com.santidev.practicasjetpackcompose.tiposdedatos.MostrarTiposDeDatos
-import com.santidev.practicasjetpackcompose.variables.MostrarVariables
+import com.santidev.practicajc.coroutinesYflows.MostrarUsoDeFlows
 
 @Composable
 fun InitialScreen() {
   
   val scroll = rememberScrollState()
   
-  Column(modifier = Modifier
-    .fillMaxSize()
-    .padding(16.dp)
-    .verticalScroll(scroll),
+  Column(
+    modifier = Modifier
+      .fillMaxSize()
+      .padding(16.dp)
+      .verticalScroll(scroll),
     verticalArrangement = Arrangement.Center,
     horizontalAlignment = Alignment.CenterHorizontally
   ) {
-  
+    MostrarUsoDeFlows()
+//    MostrarUsoDeCoroutines()
 //    MostrarUsoDeLogs()
 //    MostrarLambdas()
 //    MostrarUsoDeCondicionales()
